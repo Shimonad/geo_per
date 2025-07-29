@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
     { label: "Why Me", href: "/why-me", hasDropdown: false },
     { label: "Products", href: "#", hasDropdown: true, disabled: true },
     { label: "Solutions", href: "/solutions", hasDropdown: true },
+    { label: "Challenges", href: "/challenges", hasDropdown: false },
     { label: "Pricing", href: "/about", hasDropdown: false },
     { label: "Resources", href: "#", hasDropdown: true, disabled: true }
   ];
