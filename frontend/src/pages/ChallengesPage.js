@@ -32,11 +32,6 @@ const ChallengeCard = ({ challenge, isActive }) => (
 
       {/* Challenge Image */}
       <div className="relative h-64 lg:h-80 overflow-hidden">
-        <img 
-          src={challenge.image}
-          alt={challenge.title}
-          className="w-full h-full object-cover"
-        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
         
         {/* Overlay Content */}
@@ -44,8 +39,8 @@ const ChallengeCard = ({ challenge, isActive }) => (
           <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
-                <h4 className="font-medium text-[#202124] mb-1">Impact Achieved</h4>
-                <p className="text-[#1a73e8] font-bold text-lg">{challenge.metrics}</p>
+                <h4 className="font-medium text-[#202124] mb-1">Impact</h4>
+                <p className="text-[#1a73e8] text-lg">{challenge.impact}</p>
               </div>
               <div className="w-12 h-12 rounded-full bg-[#e8f5e8] flex items-center justify-center">
                 <ArrowRight className="w-6 h-6 text-[#137333]" />
@@ -55,23 +50,6 @@ const ChallengeCard = ({ challenge, isActive }) => (
         </div>
       </div>
 
-      {/* Challenge Details */}
-      <div className="p-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="text-center p-4 bg-[#f8f9fa] rounded-lg">
-            <div className="text-2xl font-bold text-[#1a73e8] mb-2">Phase 1</div>
-            <div className="text-sm text-[#5f6368]">Problem Identification</div>
-          </div>
-          <div className="text-center p-4 bg-[#f8f9fa] rounded-lg">
-            <div className="text-2xl font-bold text-[#1a73e8] mb-2">Phase 2</div>
-            <div className="text-sm text-[#5f6368]">Solution Design</div>
-          </div>
-          <div className="text-center p-4 bg-[#f8f9fa] rounded-lg">
-            <div className="text-2xl font-bold text-[#1a73e8] mb-2">Phase 3</div>
-            <div className="text-sm text-[#5f6368]">Implementation</div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 );
@@ -103,7 +81,7 @@ const ChallengesPage = () => {
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h1 className="text-4xl lg:text-5xl font-light text-[#202124] leading-tight">
-              Challenges{" "}
+              Challenges to be{" "}
               <span className="text-[#ea4335] font-medium">Solved</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
@@ -185,37 +163,6 @@ const ChallengesPage = () => {
         </div>
       </section>
 
-      {/* Summary Statistics */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-light text-[#202124] mb-4">
-              Collective Impact
-            </h2>
-            <p className="text-lg text-[#5f6368]">
-              Combined results across all challenge solutions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-[#f8f9fa] rounded-xl">
-              <div className="text-4xl font-light text-[#1a73e8] mb-4">75%</div>
-              <h3 className="text-lg font-medium text-[#202124] mb-2">Average Improvement</h3>
-              <p className="text-[#5f6368] text-sm">Across all metrics and KPIs</p>
-            </div>
-            <div className="text-center p-8 bg-[#f8f9fa] rounded-xl">
-              <div className="text-4xl font-light text-[#1a73e8] mb-4">3</div>
-              <h3 className="text-lg font-medium text-[#202124] mb-2">Major Challenges</h3>
-              <p className="text-[#5f6368] text-sm">Successfully resolved</p>
-            </div>
-            <div className="text-center p-8 bg-[#f8f9fa] rounded-xl">
-              <div className="text-4xl font-light text-[#1a73e8] mb-4">100%</div>
-              <h3 className="text-lg font-medium text-[#202124] mb-2">Success Rate</h3>
-              <p className="text-[#5f6368] text-sm">In problem resolution</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

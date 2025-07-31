@@ -7,13 +7,6 @@ const AboutPage = () => {
   const [activeTab, setActiveTab] = useState('experience');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [
-    { id: 'all', label: 'All Experience', icon: Users },
-    { id: 'product', label: 'Product Management', icon: Briefcase },
-    { id: 'data', label: 'Data & Analytics', icon: Award },
-    { id: 'leadership', label: 'Leadership', icon: Users }
-  ];
-
   const ExperienceContent = () => (
     <div className="space-y-0">
       {experienceData.map((exp, index) => (
@@ -132,19 +125,19 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h1 className="text-4xl lg:text-5xl font-light text-[#202124] leading-tight">
-              About
+              About {" "}
+              <span className="text-[#FBBC05] font-medium">Me</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
-              Comprehensive background in technical product management, data analysis, and strategic planning. 
-              Choose the right combination of education and experience.
+              Creative background: Technical Product Management, Data Analysis, and Strategic Planning. 
             </p>
           </div>
         </div>
       </section>
 
       {/* Toggle Section - Google Pricing Style */}
-      <section className="bg-white border-b border-[#e8eaed]">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+      <section className="bg-white border-b border-[#e8eaed] py-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-center">
             <div className="inline-flex rounded-lg border border-[#dadce0] p-1 bg-[#f8f9fa]">
               <Button
@@ -177,29 +170,12 @@ const AboutPage = () => {
       </section>
 
       {/* Content Section - Google Pricing Table Style */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-8 relative overflow-hidden bg-section">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           {/* Category Filter (for Experience) */}
           {activeTab === 'experience' && (
             <div className="mb-8">
               <div className="flex flex-wrap gap-3">
-                {categories.map((category) => {
-                  const IconComponent = category.icon;
-                  return (
-                    <button
-                      key={category.id}
-                      onClick={() => setSelectedCategory(category.id)}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                        selectedCategory === category.id
-                          ? 'bg-[#1a73e8] text-white shadow-sm'
-                          : 'bg-white text-[#5f6368] hover:text-[#1a73e8] hover:bg-[#f8f9fa] border border-[#dadce0]'
-                      }`}
-                    >
-                      <IconComponent className="w-4 h-4" />
-                      <span>{category.label}</span>
-                    </button>
-                  );
-                })}
               </div>
             </div>
           )}
@@ -216,9 +192,11 @@ const AboutPage = () => {
             <p className="text-[#5f6368] mb-4">
               Want to learn more about my qualifications for the Google Geo TPM role?
             </p>
-            <Button className="bg-[#1a73e8] hover:bg-[#1557b1] text-white px-8 py-3">
-              Schedule Interview
-            </Button>
+            <a href="/Deepdive">
+              <Button className="bg-[#1a73e8] hover:bg-[#1557b1] text-white px-8 py-3">
+                Let's Deep Dive
+              </Button>
+            </a>
           </div>
         </div>
       </section>

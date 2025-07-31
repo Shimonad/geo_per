@@ -32,3 +32,17 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes eggshell-crack {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-16px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(16px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-float {
+  animation: eggshell-crack 6s ease-in-out infinite;
+}
+
+

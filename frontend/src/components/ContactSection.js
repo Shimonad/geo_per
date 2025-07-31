@@ -61,12 +61,12 @@ const ContactSection = () => {
             Let's Connect
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Ready to discuss how I can contribute to Google's geo-location platform team? 
+            Ready to discuss how I can contribute to Google's geo-location platform team?
             Let's schedule a conversation about opportunities and mutual fit.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 py-6">
           {/* Contact Form */}
           <Card className="shadow-lg">
             <CardHeader>
@@ -167,10 +167,10 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a 
-                      href="mailto:shimona.dubey@email.com"
+                      href="mailto:shimonadubey2509@gmail.com"
                       className="text-[#1a73e8] hover:underline"
                     >
-                      shimona.dubey@email.com
+                      shimonadubey2509@gmail.com
                     </a>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium text-gray-900">LinkedIn</p>
                     <a 
-                      href="https://linkedin.com/in/shimona-dubey"
+                      href="https://linkedin.com/in/shimonadubey"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#1a73e8] hover:underline"
@@ -224,30 +224,7 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            {/* Quick Stats */}
-            <Card className="shadow-lg bg-[#1a73e8] text-white">
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-bold mb-4">Why Choose Me?</h3>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold">7+</div>
-                    <div className="text-sm opacity-90">Products Created</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold">999K+</div>
-                    <div className="text-sm opacity-90">Lives Touched</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold">5M+</div>
-                    <div className="text-sm opacity-90">Saved to Clients</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold">24hrs</div>
-                    <div className="text-sm opacity-90">Response Time</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            
           </div>
         </div>
       </div>

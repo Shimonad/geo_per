@@ -6,11 +6,6 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 const ChallengeCard = ({ challenge }) => (
   <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
     <div className="relative h-48 overflow-hidden">
-      <img 
-        src={challenge.image}
-        alt={challenge.title}
-        className="w-full h-full object-cover"
-      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
     </div>
     <div className="p-6">

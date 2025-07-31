@@ -96,12 +96,12 @@ const AboutSection = () => {
             About Shimona
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Comprehensive background in technical product management, data analysis, and strategic planning
+            Creative background in Technical Product Management, Data Analysis, and Strategic Planning.
           </p>
         </div>
 
         {/* Toggle Buttons */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-12 py-6">
           <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-gray-50">
             <Button
               onClick={() => setActiveTab('education')}

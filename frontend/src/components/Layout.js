@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Mail, Linkedin } from "lucide-react";
 
 const Layout = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,12 +9,13 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   const navigationItems = [
-    { label: "Why Me", href: "/why-me", hasDropdown: false },
-    { label: "Products", href: "#", hasDropdown: true, disabled: true },
-    { label: "Solutions", href: "/solutions", hasDropdown: true },
-    { label: "Challenges", href: "/challenges", hasDropdown: false },
-    { label: "Pricing", href: "/about", hasDropdown: false },
-    { label: "Resources", href: "#", hasDropdown: true, disabled: true }
+    { label: "Why Me?", href: "/why-me", hasDropdown: false },
+    { label: "About", href: "/about", hasDropdown: false },
+    // { label: "Challenges", href: "/challenges", hasDropdown: false },
+    { label: "Geo Analysis", href: "/deepdive", hasDropdown: false },
+    { label: "Solutions", href: "/solutions", hasDropdown: false },
+
+    
   ];
 
   const isActivePage = (href) => {
@@ -31,9 +32,9 @@ const Layout = ({ children }) => {
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <div className="flex-1 text-center">
               <p className="text-sm font-normal">
-                Get ready for Shimona's charged Third Party Integration and Quality Evaluations to streamline every user's experience!{" "}
+                Get ready for Shimona's charged Third Party Integration and Quality Evaluations to streamline every !{" "}
                 <Link 
-                  to="/solutions"
+                  to="/why-me"
                   className="underline hover:no-underline font-medium"
                 >
                   Learn More
@@ -65,7 +66,7 @@ const Layout = ({ children }) => {
                   </svg>
                 </div>
                 <span className="text-[22px] font-normal text-[#5f6368] tracking-[-0.01em]">
-                  Google Maps Platform
+                  Google Geo TPM
                 </span>
               </Link>
             </div>
@@ -104,12 +105,15 @@ const Layout = ({ children }) => {
 
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center space-x-3">
-              <Button 
-                variant="ghost"
-                className="text-[#1a73e8] hover:bg-[#f8f9fa] hover:text-[#1a73e8] text-sm font-medium px-4 py-2"
-              >
-                Contact sales
-              </Button>
+              <a href="/contact">
+                <Button 
+                  variant="ghost"
+                  className="text-[#1a73e8] hover:bg-[#f8f9fa] hover:text-[#1a73e8] text-sm font-medium px-4 py-2"
+                >
+                  Contact Me
+                </Button>
+              </a>
+              <a href="/"></a>
               <Button 
                 className="bg-[#1a73e8] hover:bg-[#1557b1] text-white text-sm font-medium px-6 py-2 rounded-md shadow-sm"
               >
@@ -151,7 +155,7 @@ const Layout = ({ children }) => {
                     variant="ghost"
                     className="w-full justify-start text-[#1a73e8] hover:bg-[#f8f9fa]"
                   >
-                    Contact sales
+                    Contact Me
                   </Button>
                   <Button 
                     className="w-full bg-[#1a73e8] hover:bg-[#1557b1] text-white"
@@ -171,86 +175,72 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Google Footer */}
-      <footer className="bg-[#f8f9fa] border-t border-[#e8eaed] py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-[#f8f9fa] border-t border-[#dadce0] py-8">
+        <div className="max-w-7xl mx-auto px-4">
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-3">
             {/* Brand */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
+
+            <div className="md:col-span-3">
+              <div className="flex items-center space-x-2">
                 <div className="w-6 h-6">
                   <svg viewBox="0 0 24 24" className="w-full h-full">
                     <path fill="#4285f4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                    <circle fill="#ffffff" cx="12" cy="9" r="2.5"/>
+                      <circle fill="#ffffff" cx="12" cy="9" r="2.5"/>
                   </svg>
                 </div>
                 <span className="text-lg font-medium text-[#202124]">Shimona Dubey</span>
               </div>
-              <p className="text-[#5f6368] mb-6 max-w-md text-sm leading-relaxed">
-                Technical Product Manager specializing in geo-location platforms and third-party integrations. 
-                Building products that delight millions of users worldwide.
-              </p>
-              <div className="flex space-x-4">
+            </div>
+              
+            {/* Social Links - Part Two below Part One */}
+            <div className="md:col-span-1 flex justify-end items-center">
+              <div className="flex items-center space-x-8">
                 <a
-                  href="https://linkedin.com/in/shimona-dubey"
+                  href="mailto:shimonadubey2509@gmail.com"
+                  className="text-[#5f6368] hover:text-[#1a73e8] transition-colors duration-200"
+                  aria-label="Gmail"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                    <path d="M24 5.457v13.909c0 .904-.732 1.634-1.636 1.634h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" fill="#EA4335"/>
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/shimonadubey"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#5f6368] hover:text-[#1a73e8] transition-colors duration-200"
+                  className="text-[#0077b5] hover:text-[#005885] transition-colors duration-200"
+                  aria-label="LinkedIn"
                 >
-                  LinkedIn
-                </a>
-                <a
-                  href="mailto:shimona.dubey@email.com"
-                  className="text-[#5f6368] hover:text-[#1a73e8] transition-colors duration-200"
-                >
-                  Email
+                  <Linkedin className="w-5 h-5" />
                 </a>
               </div>
             </div>
+          </div>          
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-sm font-medium text-[#202124] mb-4">Portfolio</h4>
-              <ul className="space-y-3">
-                {[
-                  { label: "Why Me", href: "/why-me" },
-                  { label: "About", href: "/about" },
-                  { label: "Challenges", href: "/challenges" },
-                  { label: "Solutions", href: "/solutions" },
-                  { label: "Contact", href: "/contact" }
-                ].map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-sm text-[#5f6368] hover:text-[#1a73e8] transition-colors duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
-            {/* Contact */}
-            <div>
-              <h4 className="text-sm font-medium text-[#202124] mb-4">Connect</h4>
-              <div className="space-y-3">
-                <p className="text-sm text-[#5f6368]">shimona.dubey@email.com</p>
-                <p className="text-sm text-[#5f6368]">Boston, MA</p>
-                <p className="text-sm text-[#5f6368]">Available for Google Geo TPM role</p>
-              </div>
+          {/* Bottom Bar */}
+          <div className="text-center py-6">
+            <div className="text-2xl font-light text-gray-900 flex items-center justify-center mb-2">
+              <span className="text-blue-600">G</span>
+              <span className="text-red-500">o</span>
+              <span className="text-yellow-500">o</span>
+              <span className="text-blue-600">g</span>
+              <span className="text-green-500">l</span>
+              <span className="text-red-500">e</span>
+              <span className="ml-2 text-gray-500">Portfolio</span>
             </div>
+            <p className="text-gray-600 font-light mb-2">&copy; 2025 Shimona Dubey. All rights reserved.</p>
+            <p className="text-sm text-gray-500 font-light">
+              Crafted to demonstrate strategic thinking for Technical Program Manager excellence.
+            </p>
           </div>
 
-          <div className="border-t border-[#e8eaed] mt-8 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-sm text-[#5f6368]">
-                © 2025 Shimona Dubey. All rights reserved.
-              </p>
-              <p className="text-sm text-[#5f6368] mt-2 md:mt-0">
-                Built with precision for Google's standards
-              </p>
-            </div>
-          </div>
+
+
+
+
+          
         </div>
       </footer>
     </div>

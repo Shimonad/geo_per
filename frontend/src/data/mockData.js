@@ -1,6 +1,5 @@
 export const heroData = {
   headline: "Meet Shimona Dubey",
-  subheadline: "Expert Technical Product Manager with 7+ years delivering geo-location platforms and third-party integrations that delight millions of users worldwide.",
   profileImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
   primaryCTA: "Get Started",
   secondaryCTA: "Contact Me"
@@ -8,22 +7,26 @@ export const heroData = {
 
 export const metricsData = [
   {
-    number: "7+",
+    number: "7",
+    value: "+",
     label: "Products Created",
     description: "End-to-end development"
   },
   {
-    number: "999K+",
+    number: "999",
+    value: "K+",
     label: "Lives Touched", 
     description: "User impact across platforms"
   },
   {
-    number: "5M+",
+    number: "$5",
+    value: "M+",
     label: "Saved to Clients",
     description: "Cost optimization and efficiency"
   },
   {
-    number: "5+",
+    number: "5",
+    value: "+",
     label: "Startups Supported",
     description: "From 0 to 1 journey facilitation"
   }
@@ -39,9 +42,9 @@ export const qualificationCards = [
     },
     back: {
       content: [
-        "4+ years in managing data, product & strategy",
-        "Shaped 4 startups their vision, roadmaps and launch", 
-        "User-focused strategy to shape products that solve problems for all"
+        "4+ years in managing data, product & strategy.",
+        "Shaped 4 startups their vision, roadmaps and launch.", 
+        "User-focused strategy to shape products that solve problems for all."
       ]
     }
   },
@@ -54,9 +57,9 @@ export const qualificationCards = [
     },
     back: {
       content: [
-        "Data is my love, SQL is my language",
-        "Designed 5 data ingestions pipeline, with over 500+ KPIs at Deloitte",
-        "Architected feature specific framework for deep user research improving activation by 15%"
+        "Data is my love, SQL is my language!",
+        "Deloitte: Designed 5 data ingestions pipeline, with over 500+ KPIs at Deloitte.",
+        "Xano: Architected feature specific framework for deep user research improving activation by 15%."
       ]
     }
   },
@@ -69,8 +72,8 @@ export const qualificationCards = [
     },
     back: {
       content: [
-        "Before bachelors, Automated Oracles (OFSS banking platform) testing using Selenium and invented dynamic variable handling in the company",
-        "At Axcelis, automated Regression platform testing cutting down 1 hours manual efforts to under 4 hours"
+        "Before bachelors, Automated Oracles (OFSS banking platform) testing using Selenium and invented dynamic variable handling in the company.",
+        "At Axcelis, automated Regression platform testing cutting down 1 hours manual efforts to under 4 hours."
       ]
     }
   }
@@ -83,7 +86,7 @@ export const educationData = {
     period: "2022-2024",
     details: [
       "Concentration: Technology Strategy & Innovation",
-      "Relevant Coursework: Product Management, Data Analytics, Strategic Planning"
+      "Relevant Coursework: Product Management, Entrepreneurship, New Product Innovation, Finance, Business Strategy & Operations, Marketing."
     ]
   },
   undergraduate: {
@@ -91,8 +94,8 @@ export const educationData = {
     university: "Pune University", 
     period: "2015-2019",
     details: [
-      "Specialization: Software Development & Systems Design",
-      "Academic Achievements: Relevant projects and honors"
+      "Concentration: Software Development & Database Management.",
+      "Relevant Projects: Mouse Control via Eye movement for Handicaps (Computer Vision & ML), IOT Enabled, Smart Irrigation System, Code Refactoring Platform."
     ]
   }
 };
@@ -110,10 +113,21 @@ export const experienceData = [
     ]
   },
   {
+    company: "Axcelis Technologies",
+    role: "Summer Intern",
+    description: "Semiconductor Equipment Manufacturing",
+    period: "2024",
+    achievements: [
+      "Developed automation regression testing framework using Playwright on Azure DevOps",
+      "Digitized OpCenter's process customizations, enhancing operational consistency",
+      "Increased testing efficiency by 30%, significantly reducing manual testing hours"
+    ]
+  },
+  {
     company: "SupplyRLink",
     role: "Product Manager",
     description: "AI-based Startup Streamlining Supplier Procurement",
-    period: "2023-2024",
+    period: "2024",
     achievements: [
       "Led product roadmap and MVP strategy; aligned teams for rapid time-to-market",
       "Architected AWS Glue/Lambda data pipeline, increasing data accuracy by 25%",
@@ -132,17 +146,6 @@ export const experienceData = [
     ]
   },
   {
-    company: "Axcelis Technologies",
-    role: "Summer Intern",
-    description: "Semiconductor Equipment Manufacturing",
-    period: "2023",
-    achievements: [
-      "Developed automation regression testing framework using Playwright on Azure DevOps",
-      "Digitized OpCenter's process customizations, enhancing operational consistency",
-      "Increased testing efficiency by 30%, significantly reducing manual testing hours"
-    ]
-  },
-  {
     company: "Deloitte",
     role: "Consultant",
     description: "Data Lead and Project Manager",
@@ -157,25 +160,44 @@ export const experienceData = [
 
 export const challengesData = [
   {
-    id: 1,
-    title: "Platform Integration Complexity",
-    description: "Streamlined complex third-party integrations across multiple geo-location services",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    metrics: "25% reduction in integration time"
+    id: 'governance',
+    title: 'Data Governance & Compliance',
+    description: 'Ensuring strict privacy and regulatory adherence for sensitive geospatial data.',
+    iconClass: 'fa-solid fa-shield-halved', // High-quality icon for security/compliance
+    impact: 'Lapses in handling sensitive geospatial data can result in severe legal penalties, loss of user trust, and irreparable brand damage.',
+    analysis: { impact: 10, complexity: 9 } // Impact and complexity rating out of 10
   },
   {
-    id: 2,
-    title: "User Experience Optimization", 
-    description: "Enhanced user engagement through data-driven UX improvements",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    metrics: "20% increase in user retention"
+    id: 'quality',
+    title: 'Data Ingestion & Quality',
+    description: 'Managing diverse, voluminous third-party data to ensure accuracy and freshness.',
+    iconClass: 'fa-solid fa-chart-line', // High-quality icon for data trends/quality
+    impact: 'Inconsistent or poor third-party data compromises map reliability, AI model performance, and user experience.',
+    analysis: { impact: 9, complexity: 8 }
   },
   {
-    id: 3,
-    title: "Quality Assurance at Scale",
-    description: "Implemented automated testing frameworks for large-scale operations",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop", 
-    metrics: "30% improvement in testing efficiency"
+    id: 'efficiency',
+    title: 'Operational Efficiency & Automation',
+    description: 'Transforming manual, unscalable processes into streamlined, AI-led workflows.',
+    iconClass: 'fa-solid fa-robot', // High-quality icon for automation/AI
+    impact: 'Manual processes are unscalable, prone to error, and bottleneck the strategic shift to an AI-led environment.',
+    analysis: { impact: 8, complexity: 7 }
+  },
+  {
+    id: 'collaboration',
+    title: 'Cross-Functional Collaboration',
+    description: 'Bridging communication gaps across internal teams and external vendors for unified project delivery.',
+    iconClass: 'fa-solid fa-handshake', // High-quality icon for collaboration
+    impact: 'Misalignment across internal teams and external vendors causes project delays, scope creep, and failure to deliver product goals.',
+    analysis: { impact: 7, complexity: 7 }
+  },
+  {
+    id: 'talent',
+    title: 'Talent & Resource Optimization',
+    description: 'Addressing skill gaps and analyst fatigue to foster innovation and advanced AI solution development.',
+    iconClass: 'fa-solid fa-lightbulb', // High-quality icon for innovation/talent
+    impact: 'Skill gaps and analyst fatigue from manual tasks impede innovation and development of advanced AI solutions.',
+    analysis: { impact: 6, complexity: 6 }
   }
 ];
 

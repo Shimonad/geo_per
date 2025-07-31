@@ -362,12 +362,12 @@ const SolutionPage = () => {
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h1 className="text-4xl lg:text-5xl font-light text-[#202124] leading-tight">
-              Data Integration{" "}
-              <span className="text-[#1a73e8] font-medium">Solutions</span>
+              Recommended {" "}
+              <span className="text-[#1a73e8] font-medium">Solution</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
-              Comprehensive analytics dashboard showcasing streamlined third-party integrations 
-              and quality evaluations for Google's geo-location platform ecosystem.
+              <span className="text-[#5f6368] font-bold">A comprehensive analytics dashboard </span>
+              to gain real-time visibility into complex integrations and data quality, empowering proactive operational management and enhanced platform reliability.
             </p>
           </div>
         </div>

@@ -42,11 +42,11 @@ const HomePage = () => {
                 </h1>
                 
                 <p className="text-xl lg:text-2xl text-[#5f6368] leading-relaxed max-w-2xl font-light">
-                  Expert Technical Product Manager with{" "}
-                  <span className="font-medium text-[#1a73e8]">7+ years</span>{" "}
-                  delivering geo-location platforms and third-party integrations that delight{" "}
-                  <span className="font-medium text-[#1a73e8]">millions of users</span>{" "}
-                  worldwide.
+                Technical Program Manager: Driving Impactful Data & AI Solutions impacting{" "}
+                  <span className="font-medium text-[#1a73e8]">1M users globally</span>{" "}
+                  with over {" "}
+                  <span className="font-medium text-[#1a73e8]">$5M</span>{" "}
+                  saved on operational expenses.
                 </p>
               </div>
               
@@ -75,83 +75,16 @@ const HomePage = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center space-x-8 pt-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#1a73e8]">7+</div>
-                  <div className="text-sm text-[#5f6368] font-medium">Products</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#1a73e8]">999K+</div>
-                  <div className="text-sm text-[#5f6368] font-medium">Users Impacted</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#1a73e8]">$5M+</div>
-                  <div className="text-sm text-[#5f6368] font-medium">Client Savings</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#1a73e8]">5+</div>
-                  <div className="text-sm text-[#5f6368] font-medium">Startups</div>
-                </div>
-              </div>
             </div>
 
-            {/* Right Content - Profile Showcase */}
+            {/* Right Content - Only Picture with Animation */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Main Profile Card */}
-                <div className="bg-white rounded-2xl shadow-xl border border-[#e8eaed] p-8 max-w-sm">
-                  <div className="text-center space-y-6">
-                    {/* Profile Image */}
-                    <div className="relative mx-auto w-32 h-32">
-                      <div className="w-full h-full rounded-full border-4 border-[#1a73e8] p-1">
-                        <div className="w-full h-full bg-gradient-to-br from-[#4285f4] to-[#1a73e8] rounded-full flex items-center justify-center">
-                          <div className="text-white text-3xl font-bold">SD</div>
-                        </div>
-                      </div>
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#34a853] rounded-full border-4 border-white flex items-center justify-center">
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-
-                    {/* Info */}
-                    <div>
-                      <h3 className="text-xl font-semibold text-[#202124] mb-2">Shimona Dubey</h3>
-                      <p className="text-[#5f6368] text-sm mb-4">Technical Product Manager</p>
-                      
-                      {/* Skills Tags */}
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {["Geo-location", "Data Analytics", "Product Strategy"].map((skill) => (
-                          <span 
-                            key={skill}
-                            className="px-3 py-1 bg-[#e8f0fe] text-[#1a73e8] text-xs font-medium rounded-full"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Quick Stats */}
-                    <div className="border-t border-[#e8eaed] pt-4">
-                      <div className="grid grid-cols-2 gap-4 text-center">
-                        <div>
-                          <div className="text-lg font-bold text-[#1a73e8]">MS</div>
-                          <div className="text-xs text-[#5f6368]">Tufts University</div>
-                        </div>
-                        <div>
-                          <div className="text-lg font-bold text-[#1a73e8]">7Y</div>
-                          <div className="text-xs text-[#5f6368]">Experience</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#fbbc04] rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-[#ea4335] rounded-full opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute top-1/2 -left-8 w-8 h-8 bg-[#34a853] rounded-full opacity-25 animate-pulse" style={{ animationDelay: '2s' }}></div>
-              </div>
+              <img
+                src="/profile.png"
+                alt="Profile"
+                className="w-64 h-64 object-contain animate-float"
+                style={{ pointerEvents: 'none', userSelect: 'none' }}
+              />
             </div>
           </div>
         </div>
@@ -178,8 +111,8 @@ const HomePage = () => {
       <section className="bg-[#f8f9fa] py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-normal text-[#202124] mb-6">
-            Ready to explore my journey to{" "}
-            <span className="text-[#1a73e8] font-medium">Google?</span>
+            Ready to explore my journey?{" "}
+            <span className="text-[#1a73e8] font-medium"></span>
           </h2>
           <p className="text-lg text-[#5f6368] mb-8 leading-relaxed">
             Discover how my experience in technical product management, data analysis, 
@@ -187,7 +120,7 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/why-me">
+            <Link to="/about">
               <Button 
                 size="lg"
                 className="bg-[#1a73e8] hover:bg-[#1557b1] text-white px-8 py-3 text-base font-medium rounded-md"

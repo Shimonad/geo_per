@@ -20,12 +20,13 @@ const AnnouncementBar = () => {
         <div className="flex-1 text-center">
           <p className="text-sm font-medium">
             Get ready for Shimona's charged Third Party Integration and Quality Evaluations to streamline every user's experience!{" "}
-            <button 
-              onClick={handleLearnMore}
-              className="underline hover:no-underline font-semibold"
-            >
-              Learn More
-            </button>
+            <a href="/why-me">
+              <button 
+                className="underline hover:no-underline font-semibold"
+              >
+                Learn More
+              </button>
+            </a>
           </p>
         </div>
         <button

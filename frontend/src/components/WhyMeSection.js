@@ -4,7 +4,7 @@ import * as LucideIcons from "lucide-react";
 
 const MetricCard = ({ metric }) => (
   <div className="text-center p-6 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow duration-200">
-    <div className="text-3xl lg:text-4xl font-bold text-[#1a73e8] mb-2">
+    <div className="text-3xl lg:text-6xl xl:text-7xl font-bold text-[#1a73e8] mb-2">
       {metric.number}
     </div>
     <div className="text-lg font-semibold text-gray-900 mb-1">
@@ -61,7 +61,7 @@ const WhyMeSection = () => {
         </div>
 
         {/* Qualification Cards Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 py-6">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             What you are looking for?
           </h2>

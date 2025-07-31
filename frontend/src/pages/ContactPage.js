@@ -48,10 +48,7 @@ const ContactPage = () => {
   };
 
   const handleCalendlyClick = () => {
-    toast({
-      title: "Scheduling System",
-      description: "This would integrate with Calendly or Google Calendar in a real implementation.",
-    });
+    window.open('https://calendly.com/shimonadubey2509/30min', '_blank');
   };
 
   return (
@@ -65,7 +62,7 @@ const ContactPage = () => {
               <span className="text-[#1a73e8] font-medium">Connect</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
-              Ready to discuss how I can contribute to Google's geo-location platform team? 
+              Ready to discuss how I can contribute to Google's geo-location platform team?
               Let's schedule a conversation about opportunities and mutual fit.
             </p>
           </div>
@@ -73,7 +70,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-12">
+      <section className="bg-white py-6">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Form */}
@@ -201,10 +198,10 @@ const ContactPage = () => {
                     <div>
                       <p className="font-medium text-[#202124] text-sm">Email</p>
                       <a 
-                        href="mailto:shimona.dubey@email.com"
+                        href="mailto:shimonadubey2509@gmail.com"
                         className="text-[#1a73e8] hover:underline text-sm"
                       >
-                        shimona.dubey@email.com
+                        shimonadubey2509@gmail.com
                       </a>
                     </div>
                   </div>
@@ -235,16 +232,6 @@ const ContactPage = () => {
                       </a>
                     </div>
                   </div>
-
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-[#e8f5e8] flex items-center justify-center">
-                      <Clock className="w-5 h-5 text-[#137333]" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-[#202124] text-sm">Response Time</p>
-                      <p className="text-[#137333] text-sm font-medium">Within 24 hours</p>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
 
@@ -271,31 +258,6 @@ const ContactPage = () => {
                   </Button>
                 </CardContent>
               </Card>
-
-              {/* Quick Stats */}
-              <Card className="shadow-lg bg-gradient-to-br from-[#1a73e8] to-[#1557b1] text-white border-[#1a73e8]">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-medium mb-6">Why Choose Me for Google Geo TPM?</h3>
-                  <div className="grid grid-cols-2 gap-4 text-center">
-                    <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                      <div className="text-2xl font-light mb-1">7+</div>
-                      <div className="text-xs opacity-90">Products Built</div>
-                    </div>
-                    <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                      <div className="text-2xl font-light mb-1">999K+</div>
-                      <div className="text-xs opacity-90">Users Impacted</div>
-                    </div>
-                    <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                      <div className="text-2xl font-light mb-1">$5M+</div>
-                      <div className="text-xs opacity-90">Client Savings</div>
-                    </div>
-                    <div className="p-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                      <div className="text-2xl font-light mb-1">100%</div>
-                      <div className="text-xs opacity-90">Success Rate</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -309,10 +271,6 @@ const ContactPage = () => {
             <span className="text-[#1a73e8] font-medium">Google Geo TPM</span>{" "}
             opportunity?
           </h2>
-          <p className="text-lg text-[#5f6368] mb-8 leading-relaxed">
-            Let's explore how my technical product management expertise and proven track record 
-            in geo-location platforms can contribute to Google's continued innovation.
-          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -322,13 +280,15 @@ const ContactPage = () => {
             >
               Schedule Interview
             </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-[#dadce0] text-[#1a73e8] hover:bg-[#f8f9fa] hover:border-[#1a73e8] px-8 py-3 text-base font-medium"
-            >
-              Download Resume
-            </Button>
+            <a href="/Shimona_Dubey_TPM.pdf" download>
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-[#dadce0] text-[#1a73e8] hover:bg-[#f8f9fa] hover:border-[#1a73e8] px-8 py-3 text-base font-medium"
+              >
+                Download Resume
+              </Button>
+            </a>
           </div>
         </div>
       </section>
