@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Shimona Dubey. All rights reserved.
+              2025 Shimona Dubey. All copyrights reserved to original owners.
             </p>
           </div>
         </div>
