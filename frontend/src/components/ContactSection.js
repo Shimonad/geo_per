@@ -88,7 +88,7 @@ const ContactSection = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="John Doe"
+                      placeholder="Jane Miracle"
                       className="border-gray-300 focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                     />
                   </div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="john@company.com"
+                      placeholder="jane@company.com"
                       className="border-gray-300 focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                     />
                   </div>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="I'd like to discuss the Google Geo TPM opportunity..."
+                    placeholder="I'd like to discuss about your profile"
                     className="border-gray-300 focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                   />
                 </div>

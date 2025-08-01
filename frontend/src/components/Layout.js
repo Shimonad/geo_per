@@ -11,9 +11,9 @@ const Layout = ({ children }) => {
   const navigationItems = [
     { label: "Why Me?", href: "/why-me", hasDropdown: false },
     { label: "About", href: "/about", hasDropdown: false },
-    // { label: "Challenges", href: "/challenges", hasDropdown: false },
-    { label: "Geo Analysis", href: "/deepdive", hasDropdown: false },
+    { label: "Challenges", href: "/challenges", hasDropdown: false },
     { label: "Solutions", href: "/solutions", hasDropdown: false },
+    { label: "Deep Dive", href: "/deepdive", hasDropdown: false },
 
     
   ];
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <div className="flex-1 text-center">
               <p className="text-sm font-normal">
-                Get ready for Shimona's charged Third Party Integration and Quality Evaluations to streamline every !{" "}
+                Get ready to see how my data-driven insights transform product experiences!{" "}
                 <Link 
                   to="/why-me"
                   className="underline hover:no-underline font-medium"
@@ -59,15 +59,10 @@ const Layout = ({ children }) => {
             {/* Google Maps Platform Logo */}
             <div className="flex items-center space-x-2">
               <Link to="/" className="flex items-center space-x-2">
-                <div className="w-6 h-6">
-                  <svg viewBox="0 0 24 24" className="w-full h-full">
-                    <path fill="#4285f4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                    <circle fill="#ffffff" cx="12" cy="9" r="2.5"/>
-                  </svg>
+                <div class="text-2xl font-bold text-[#202124] flex items-center">
+                    <span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span>
+                    <span class="ml-2 text-xl font-normal text-gray-500">Geo TPM</span>
                 </div>
-                <span className="text-[22px] font-normal text-[#5f6368] tracking-[-0.01em]">
-                  Google Geo TPM
-                </span>
               </Link>
             </div>
 
@@ -113,12 +108,13 @@ const Layout = ({ children }) => {
                   Contact Me
                 </Button>
               </a>
-              <a href="/"></a>
-              <Button 
-                className="bg-[#1a73e8] hover:bg-[#1557b1] text-white text-sm font-medium px-6 py-2 rounded-md shadow-sm"
-              >
-                Get started
-              </Button>
+              <a href="/">
+                <Button 
+                  className="bg-[#1a73e8] hover:bg-[#1557b1] text-white text-sm font-medium px-6 py-2 rounded-md shadow-sm"
+                >
+                  Get started
+                </Button>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -151,17 +147,21 @@ const Layout = ({ children }) => {
                   </Link>
                 ))}
                 <div className="pt-4 space-y-2">
-                  <Button 
-                    variant="ghost"
-                    className="w-full justify-start text-[#1a73e8] hover:bg-[#f8f9fa]"
-                  >
-                    Contact Me
-                  </Button>
-                  <Button 
-                    className="w-full bg-[#1a73e8] hover:bg-[#1557b1] text-white"
-                  >
-                    Get started
-                  </Button>
+                  <Link to="/contact" >
+                      <Button 
+                        variant="ghost"
+                        className="w-full justify-start text-[#1a73e8] hover:bg-[#f8f9fa]"
+                      >
+                        Contact Me
+                      </Button>
+                    </Link>
+                    <Link to="/" >
+                      <Button 
+                        className="w-full bg-[#1a73e8] hover:bg-[#1557b1] text-white"
+                      >
+                        Get started
+                      </Button>
+                    </Link>
                 </div>
               </div>
             </div>

@@ -122,28 +122,28 @@ const AboutPage = () => {
     <div className="min-h-screen bg-[#f8f9fa]">
       {/* Hero Section - Google Pricing Style */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6 py-16 pb-8 lg:py-20 lg:pb-12">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h1 className="text-4xl lg:text-5xl font-light text-[#202124] leading-tight">
               About {" "}
               <span className="text-[#FBBC05] font-medium">Me</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
-              Creative background: Technical Product Management, Data Analysis, and Strategic Planning. 
+              Curious, Data-obsessed Technical Program Manager with over 4 years building zero-to-one automation platforms—processing 50M+ records/month, slashing manual tasks by 80%, and unlocking $2M+ in efficiency gains through user-centric insights.
             </p>
           </div>
         </div>
       </section>
 
       {/* Toggle Section - Google Pricing Style */}
-      <section className="bg-white border-b border-[#e8eaed] py-6">
+      <section className="bg-white border-b border-[#e8eaed] py-3">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-center">
-            <div className="inline-flex rounded-lg border border-[#dadce0] p-1 bg-[#f8f9fa]">
+            <div className="inline-flex rounded-full border border-[#dadce0] p-1 bg-[#f8f9fa]">
               <Button
                 onClick={() => setActiveTab('education')}
                 variant="ghost"
-                className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                   activeTab === 'education' 
                     ? 'bg-[#1a73e8] text-white shadow-sm hover:bg-[#1a73e8]' 
                     : 'text-[#5f6368] hover:text-[#202124] hover:bg-white'
@@ -155,7 +155,7 @@ const AboutPage = () => {
               <Button
                 onClick={() => setActiveTab('experience')}
                 variant="ghost"
-                className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                   activeTab === 'experience' 
                     ? 'bg-[#1a73e8] text-white shadow-sm hover:bg-[#1a73e8]' 
                     : 'text-[#5f6368] hover:text-[#202124] hover:bg-white'
@@ -170,7 +170,25 @@ const AboutPage = () => {
       </section>
 
       {/* Content Section - Google Pricing Table Style */}
-      <section className="py-8 relative overflow-hidden bg-section">
+      <section 
+        className="py-8 relative overflow-hidden"
+        style={{
+          backgroundImage: 'url(/map-image.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          position: 'relative'
+        }}
+      >
+        {/* Overlay for transparency */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            zIndex: 1
+          }}
+        ></div>
+        
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           {/* Category Filter (for Experience) */}
           {activeTab === 'experience' && (

@@ -51,28 +51,29 @@ const HomePage = () => {
               </div>
               
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 ">
                 <Link to="/why-me">
                   <Button 
                     size="lg"
-                    className="bg-[#1a73e8] hover:bg-[#1557b1] text-white px-8 py-4 text-base font-medium rounded-md transition-all duration-200 hover:shadow-lg group"
+                    className="bg-[#1a73e8] hover:bg-[#1557b1] text-white px-8 py-3 text-base font-medium rounded-md"
                   >
-                    Explore My Expertise
+                    Explore More
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </Button>
                 </Link>
-                
                 <Link to="/contact">
                   <Button 
                     variant="outline"
                     size="lg"
-                    className="border-[#dadce0] text-[#1a73e8] hover:bg-[#f8f9fa] hover:border-[#1a73e8] px-8 py-4 text-base font-medium rounded-md transition-all duration-200 group"
+                    className="border-[#dadce0] text-[#1a73e8] hover:bg-white hover:border-[#1a73e8] px-8 py-3 text-base font-medium rounded-md"
                   >
                     <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-200" />
                     Schedule Interview
                   </Button>
                 </Link>
               </div>
+
+
 
               {/* Trust Indicators */}
             </div>
@@ -82,15 +83,14 @@ const HomePage = () => {
               <img
                 src="/profile.png"
                 alt="Profile"
-                className="w-64 h-64 object-contain animate-float"
-                style={{ pointerEvents: 'none', userSelect: 'none' }}
+                className="w-96 h-96 object-contain animate-shake"
               />
             </div>
           </div>
         </div>
 
         {/* Bottom Wave */}
-        <div className="absolute bottom-0 left-0 w-full">
+        <div hidden className="absolute bottom-0 left-0 w-full">
           <svg viewBox="0 0 1200 120" className="w-full h-auto">
             <path 
               d="M0,60 C200,120 400,0 600,60 C800,120 1000,0 1200,60 L1200,120 L0,120 Z" 

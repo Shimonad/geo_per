@@ -99,7 +99,7 @@ const ContactPage = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="John Doe"
+                          placeholder="Jan Miracle"
                           className="border-[#dadce0] focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                         />
                       </div>
@@ -115,7 +115,7 @@ const ContactPage = () => {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="john@google.com"
+                          placeholder="jane@google.com"
                           className="border-[#dadce0] focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                         />
                       </div>
@@ -164,7 +164,7 @@ const ContactPage = () => {
                         rows={5}
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="I'd like to discuss the Google Geo TPM opportunity and how your experience in technical product management and data integration aligns with our team's needs..."
+                        placeholder="I'd like to discuss about your experinces..."
                         className="border-[#dadce0] focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                       />
                     </div>
@@ -244,8 +244,8 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   <p className="text-[#5f6368] mb-6 text-sm leading-relaxed">
-                    Prefer a direct conversation? Schedule a 30-minute call to discuss 
-                    the Google Geo TPM opportunity and how my experience aligns with your team's needs.
+                    Prefer a direct conversation?
+                    Schedule a quick 15-minute call to discuss.
                   </p>
                   
                   <Button 
@@ -254,7 +254,7 @@ const ContactPage = () => {
                     className="w-full border-[#1a73e8] text-[#1a73e8] hover:bg-[#1a73e8] hover:text-white py-3 text-base font-medium"
                   >
                     <Calendar className="w-4 h-4 mr-2" />
-                    Book a 30-min Call
+                    Book a 15-min Call
                   </Button>
                 </CardContent>
               </Card>
@@ -280,7 +280,7 @@ const ContactPage = () => {
             >
               Schedule Interview
             </Button>
-            <a href="/Shimona_Dubey_TPM.pdf" download>
+            <a href="/Shimona_Dubey_Resume.pdf" download>
               <Button 
                 variant="outline"
                 size="lg"

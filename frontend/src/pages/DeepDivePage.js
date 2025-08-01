@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
-import { ArrowRight, Target, BarChart3, Users, Shield, Lightbulb, Globe, Menu, X, Filter, Zap, BrainCircuit } from "lucide-react";
+import { ArrowRight, Target, BarChart3, Users, Shield, Lightbulb, Globe, Menu, X, Filter, Zap, BrainCircuit, CheckCircle, TrendingUp, ChevronLeft, ChevronRight, AlertTriangle, MapPin, Store, CreditCard, Truck, Clock, ChevronDown } from "lucide-react";
+
 
 export default function DeepDivePage() {
   const [selectedChallenge, setSelectedChallenge] = useState(null);
@@ -11,15 +12,16 @@ export default function DeepDivePage() {
   const [expandedPhases, setExpandedPhases] = useState(new Set());
   
   const chartRef = useRef(null);
+  const scrollContainerRef = useRef(null);
 
   // Google brand colors
   const googleColors = [
-    { bg: "bg-blue-500", text: "text-white", light: "bg-blue-50", accent: "border-blue-200" }, // G - Blue
-    { bg: "bg-red-500", text: "text-white", light: "bg-red-50", accent: "border-red-200" }, // o - Red
+    { bg: "bg-[#4285F4]", text: "text-white", light: "bg-blue-50", accent: "border-blue-200" }, // G - Blue
+    { bg: "bg-[#EA4335]", text: "text-white", light: "bg-red-50", accent: "border-red-200" }, // o - Red
     { bg: "bg-yellow-400", text: "text-gray-900", light: "bg-yellow-50", accent: "border-yellow-200" }, // o - Yellow
-    { bg: "bg-blue-600", text: "text-white", light: "bg-blue-50", accent: "border-blue-300" }, // g - Blue (darker)
-    { bg: "bg-green-500", text: "text-white", light: "bg-green-50", accent: "border-green-200" }, // l - Green
-    { bg: "bg-red-600", text: "text-white", light: "bg-red-50", accent: "border-red-300" }, // e - Red (darker)
+    { bg: "bg-[#4285F4]", text: "text-white", light: "bg-blue-50", accent: "border-blue-200" }, // G - Blue
+    { bg: "bg-[#34A853]", text: "text-white", light: "bg-green-50", accent: "border-green-200" }, // l - Green
+    { bg: "bg-[#EA4335]", text: "text-white", light: "bg-red-50", accent: "border-red-200" }, // o - Red
   ];
 
   const challengeData = [
@@ -166,22 +168,25 @@ export default function DeepDivePage() {
     },
   ];
 
-  const leadershipPrinciples = [
-    { icon: '🎯', title: 'Start with the "So What?"', text: 'Frame problems in terms of their impact on users, mission, or revenue.', color: googleColors[0] },
-    { icon: '📊', title: 'Be Data-Driven', text: 'Support every claim with quantifiable data, SQL-derived metrics, and insightful dashboards.', color: googleColors[1] },
-    { icon: '🗺️', title: 'Provide Actionable Roadmaps', text: 'Present clear recommendations with realistic timelines and resource needs.', color: googleColors[2] },
-    { icon: '🛡️', title: 'Anticipate & Mitigate Risks', text: 'Proactively address potential objections and demonstrate foresight with a risk plan.', color: googleColors[3] },
-    { icon: '💡', title: 'Embrace Innovation & AI-First', text: 'Showcase how solutions leverage cutting-edge technology like AI/ML.', color: googleColors[4] },
-    { icon: '🌍', title: 'Think Scalable & Global', text: 'Design solutions with Google\'s global scale and billions of users in mind.', color: googleColors[5] },
+  const impactPhraseData = [
+    { text: "Tapping into the So-whats??", color: "bg-[#4285F4]" }, // Google Blue
+    { text: "Data, Data, what do you say?", color: "bg-[#EA4335]" }, // Google Red
+    { text: "Actionable roadmap", color: "bg-[#FBBC05]" }, // Google Yellow
+    { text: "AI to Automate", color: "bg-[#4285F4]" }, // Google Blue
+    { text: "Iterate on what the user says.", color: "bg-[#34A853]" }, // Google Green
+    { text: "And, Think Global!", color: "bg-[#EA4335]" } // Google Red
   ];
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false);
+
+  const scrollToSection = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      // Calculate one box width (384px + 32px gap = 416px)
+      const scrollAmount = direction === 'next' ? 416 : -416;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+
 
   const togglePhase = (index) => {
     const newExpanded = new Set(expandedPhases);
@@ -333,7 +338,7 @@ export default function DeepDivePage() {
         <section id="challenges" className="py-24 bg-gray-43 relative">
           <div className="container mx-auto bg-gray-43 px-6">
             <div className="text-center mb-20 bg-gray-43">
-              <div className="inline-flex items-center gap-2 bg-red-50 rounded-full px-4 py-2 text-medium text-red-600 mb-6">
+              <div className="inline-flex items-center gap-2 bg-red-50 rounded-full px-4 py-2 text-sm text-red-600 mb-6">
                 <Shield className="w-4 h-4" />
                 Critical Focus Areas
               </div>
@@ -444,11 +449,11 @@ export default function DeepDivePage() {
         </section>
 
         {/* Solutions Section with modern card grid */}
-        <section id="solutions" className="py-24 bg-white relative">
+        <section id="solutions" className="py-15 bg-white relative">
           <div className="absolute inset-0 bg-white opacity-30"></div>
           <div className="container mx-auto px-6 relative">
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 bg-green-600 rounded-full px-4 py-2 text-sm text-green- mb-6">
+              <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-2 text-sm text-green-600 mb-6">
                 <Lightbulb className="w-4 h-4" />
                 Strategic Solutions
               </div>
@@ -504,7 +509,7 @@ export default function DeepDivePage() {
         <section id="roadmap" className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 bg-purple-50 rounded-full px-4 py-2 text-sm text-purple-600 mb-6">
+              <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 text-sm text-yellow-600 mb-6">
                 <Target className="w-4 h-4" />
                 Execution Plan
               </div>
@@ -602,6 +607,64 @@ export default function DeepDivePage() {
           </div>
         </section>
 
+        {/* Section 5: Metrics Dashboard */}
+        <section>
+          <div className="flex-shrink-0 w-full lg:w-screen snap-start">
+            <div className="bg-white p-8 lg:p-12">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-2 text-sm text-green-600 mb-6">
+                  <Target className="w-4 h-4" />
+                  Insights Wizard
+                  </div>
+                  <h2 className="text-3xl lg:text-4xl font-light text-[#202124] mb-4">
+                    Performance Metrics
+                  </h2>
+                  <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 leading-relaxed font-light">
+                  Clear Key Performance Indicators to ensure measurable progress and alignment with Google's strategic goals.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-gradient-to-br from-[#e8f5e8] to-[#f1f8e9] rounded-xl p-6 text-center">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-[#137333] mb-2">96%</div>
+                    <div className="text-sm text-[#5f6368]">Data Quality Score</div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-[#e8f0fe] to-[#f1f5fe] rounded-xl p-6 text-center ">
+                    <div className="w-12 h-12 bg-[#1a73e8] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <TrendingUp className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-[#1a73e8] mb-2">8.4M</div>
+                    <div className="text-sm text-[#5f6368]">Records Processed Daily</div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-[#fff3e0] to-[#fef7e0] rounded-xl p-6 text-center">
+                    <div className="w-12 h-12 bg-[#fbbc04] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-[#f57c00] mb-2">78%</div>
+                    <div className="text-sm text-[#5f6368]">Automation Rate</div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-[#fce8e6] to-[#fef0ef] rounded-xl p-6 text-center">
+                    <div className="w-12 h-12 bg-[#ea4335] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-[#ea4335] mb-2">127</div>
+                    <div className="text-sm text-[#5f6368]">Active Providers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
         {/* Leadership Section with premium design */}
         <section id="leadership" className="py-24 bg-white via-white to-green-50 relative overflow-hidden">
           <div className="absolute inset-0 opacity-40"></div>
@@ -623,44 +686,71 @@ export default function DeepDivePage() {
                 </p>
               </div>
 
-              {/* Horizontal Flow Cards with Google colors */}
-              <div className="relative mb-16">
-                <div className="flex overflow-x-auto pb-6 space-x-8 snap-x snap-mandatory scrollbar-hide">
-                  {[
-                    { text: "By asking So-whats??", subtitle: "Strategic questioning drives clarity" },
-                    { text: "Data, Data, what do you say?", subtitle: "Let insights guide decisions" },
-                    { text: "Actionable roadmap", subtitle: "Clear paths to measurable outcomes" },
-                    { text: "AI to Automate", subtitle: "Technology amplifies human potential" },
-                    { text: "Iterate on what the user says.", subtitle: "Continuous feedback loops" },
-                    { text: "And, Think Global!", subtitle: "Scale solutions worldwide" }
-                  ].map((step, index) => {
-                    const color = googleColors[index];
-                    return (
-                      <div key={index} className="relative flex-shrink-0 snap-center group">
-                        <div className={`w-96 h-56 rounded-3xl ${color.bg} ${color.text} p-8 flex flex-col justify-center text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 relative overflow-hidden`}>
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+              {/* Horizontal Flow Cards with Google colors and Navigation */}
+              <div className="relative mb-16 py-8">
+                <div className="flex justify-center">
+                  {/* Container that limits scroll width to 3 cards */}
+                  <div className="relative w-full max-w-[1248px]"> {/* 3 cards * 384px + 2 gaps * 32px = 1248px */}
+                    
+                    {/* Navigation Arrows - Positioned to span across 3 boxes */}
+                    <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 z-10">
+                      <Button
+                        onClick={() => scrollToSection('prev')}
+                        variant="outline"
+                        size="sm"
+                        className="w-16 h-16 rounded-full border-2 border-[#e8eaed] bg-white/90 backdrop-blur-sm shadow-lg hover:bg-white hover:border-blue-500 transition-colors"
+                      >
+                        <ChevronLeft className="w-8 h-8 text-[#5f6368]" />
+                      </Button>
+                    </div>
 
-                          <div className="relative z-10">
-                            <h4 className={`text-2xl font-semibold ${color.text} leading-tight mb-2`}>
-                              {step.text}
-                            </h4>
-                            <p className={`${color.text} opacity-90 text-sm font-light`}>
-                              {step.subtitle}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Enhanced connecting arrow */}
-                        {index < 5 && (
-                          <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                            <div className="w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-gray-100 group-hover:scale-110 transition-transform duration-300">
-                              <ArrowRight className="w-4 h-4 text-gray-600" />
+                    <div className="absolute -right-20 top-1/2 transform -translate-y-1/2 z-10">
+                      <Button
+                        onClick={() => scrollToSection('next')}
+                        variant="outline"
+                        size="sm"  
+                        className="w-16 h-16 rounded-full border-2 border-[#e8eaed] bg-white/90 backdrop-blur-sm shadow-lg hover:bg-white hover:border-blue-500 transition-colors"
+                      >
+                        <ChevronRight className="w-8 h-8 text-[#5f6368]" />
+                      </Button>
+                    </div>
+
+                    {/* Scrollable Container */}
+                    <div 
+                      ref={scrollContainerRef}
+                      className="flex overflow-x-auto pb-6 py-4 space-x-8 snap-x snap-mandatory scrollbar-hide"
+                      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
+                      {[
+                        { text: "Tapping into the So-whats??", subtitle: "Strategic questioning drives clarity." },
+                        { text: "Data, Data, what do you say?", subtitle: "Let insights guide decisions." },
+                        { text: "Actionable roadmap", subtitle: "Clear paths to measurable outcomes." },
+                        { text: "AI to Automate", subtitle: "Amplifies the workflows and redundancies." },
+                        { text: "Iterate on what the user says.", subtitle: "Continuous feedback loops." },
+                        { text: "And, Think Global!", subtitle: "Scale solutions worldwide." }
+                      ].map((step, index) => {
+                        const color = googleColors[index];
+                        return (
+                          <div key={index} className="relative flex-shrink-0 snap-start group">
+                            <div className={`w-96 h-56 rounded-3xl ${color.bg} ${color.text} p-8 flex flex-col justify-center text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 relative overflow-hidden`}>
+                              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+
+                              <div className="relative z-10">
+                                <h4 className={`text-2xl font-semibold ${color.text} leading-tight mb-2`}>
+                                  {step.text}
+                                </h4>
+                                <p className={`${color.text} opacity-90 text-sm font-semi-bold`}>
+                                  {step.subtitle}
+                                </p>
+                              </div>
                             </div>
+                            
+
                           </div>
-                        )}
-                      </div>
-                    );
-                  })}
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Enhanced mobile scroll indicator */}
@@ -675,6 +765,11 @@ export default function DeepDivePage() {
             </div>
           </div>
         </section>
+
+
+
+
+
       </main>
 
     </div>

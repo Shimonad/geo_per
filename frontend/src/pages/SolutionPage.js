@@ -124,8 +124,7 @@ const SolutionPage = () => {
     { id: 'overview', label: 'Overview', icon: BarChart3 },
     { id: 'providers', label: 'Data Providers', icon: Database, badge: '5' },
     { id: 'quality', label: 'Quality Control', icon: Shield, badge: '12' },
-    { id: 'pipeline', label: 'Processing Pipeline', icon: Activity },
-    { id: 'monitoring', label: 'System Monitoring', icon: Monitor }
+    { id: 'pipeline', label: 'Processing Pipeline', icon: Activity }
   ];
 
   const renderTabContent = () => {
@@ -320,37 +319,6 @@ const SolutionPage = () => {
           </div>
         );
       
-      case 'monitoring':
-        return (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {Object.entries(dashboardData.monitoring.systemHealth).map(([key, value]) => (
-              <div key={key} className="bg-white p-6 rounded-lg border border-[#e8eaed] shadow-sm">
-                <h3 className="text-base font-medium text-[#202124] mb-4 capitalize">{key} Usage</h3>
-                <div className="mb-4">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-[#5f6368]">Current Usage</span>
-                    <span className="font-bold text-[#202124]">{value}%</span>
-                  </div>
-                  <div className="w-full bg-[#e8eaed] rounded-full h-3">
-                    <div 
-                      className={`h-3 rounded-full transition-all duration-500 ${
-                        value > 80 ? 'bg-[#ea4335]' : value > 60 ? 'bg-[#f57c00]' : 'bg-[#137333]'
-                      }`}
-                      style={{ width: `${value}%` }}
-                    ></div>
-                  </div>
-                </div>
-                <div className={`text-xs font-medium ${
-                  value > 80 ? 'text-[#ea4335]' : value > 60 ? 'text-[#f57c00]' : 'text-[#137333]'
-                }`}>
-                  {value > 80 ? 'High Usage' : value > 60 ? 'Moderate Usage' : 'Optimal'}
-                </div>
-              </div>
-            ))}
-          </div>
-        );
-      
-      default:
         return null;
     }
   };
@@ -362,12 +330,12 @@ const SolutionPage = () => {
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h1 className="text-4xl lg:text-5xl font-light text-[#202124] leading-tight">
-              Recommended {" "}
-              <span className="text-[#1a73e8] font-medium">Solution</span>
+              Where do we{" "}
+              <span className="text-[#1a73e8] font-medium">Start?</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
-              <span className="text-[#5f6368] font-bold">A comprehensive analytics dashboard </span>
-              to gain real-time visibility into complex integrations and data quality, empowering proactive operational management and enhanced platform reliability.
+              <span className="text-[#5f6368] font-bold"></span>
+              A comprehensive analytics dashboard as starting point to gain real-time visibility into complex integrations and data quality, empowering proactive operational management and enhanced platform reliability.
             </p>
           </div>
         </div>
