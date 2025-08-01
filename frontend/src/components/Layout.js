@@ -230,7 +230,7 @@ const Layout = ({ children }) => {
               <span className="text-red-500">e</span>
               <span className="ml-2 text-gray-500">Portfolio</span>
             </div>
-            <p className="text-gray-600 font-light mb-2">&copy; 2025 Shimona Dubey. All rights reserved.</p>
+            <p className="text-sm text-gray-500 font-light">2025 Shimona Dubey. All rights reserved to original owners.</p>
             <p className="text-sm text-gray-500 font-light">
               Crafted to demonstrate strategic thinking for Technical Program Manager excellence.
             </p>
