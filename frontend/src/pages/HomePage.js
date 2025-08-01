@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { heroData } from "../data/mockData";
 import { ArrowRight, Play } from "lucide-react";
+import { track } from "@vercel/analytics";
 
 const HomePage = () => {
   return (
@@ -56,6 +57,7 @@ const HomePage = () => {
                   <Button 
                     size="lg"
                     className="bg-[#1a73e8] hover:bg-[#1557b1] text-white px-8 py-3 text-base font-medium rounded-md"
+                    onClick={() => track('Explore More')}
                   >
                     Explore More
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />

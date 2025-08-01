@@ -10,6 +10,9 @@ import SolutionPage from "./pages/SolutionPage";
 import DeepDivePage from "./pages/DeepDivePage";
 import ContactPage from "./pages/ContactPage";
 import { Toaster } from "./components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react"
+
+
 
 function App() {
   return (
@@ -28,8 +31,9 @@ function App() {
         </Layout>
         <Toaster />
       </BrowserRouter>
+      <Analytics />
     </div>
   );
 }
 
-export default App;
+export default App
