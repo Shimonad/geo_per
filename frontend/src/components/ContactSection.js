@@ -210,7 +210,7 @@ const ContactSection = () => {
               <CardContent>
                 <p className="text-gray-600 mb-6">
                   Prefer a direct conversation? Schedule a 30-minute call to discuss 
-                  the Google Geo TPM opportunity and how my experience aligns with your team's needs.
+                  the opportunities at Google and how my experience aligns with your team's needs.
                 </p>
                 
                 <Button 

@@ -304,7 +304,7 @@ export default function DeepDivePage() {
             It's now a direct child of the <section>, outside the max-w-7xl container.
             This allows it to span the full width. I also removed `overflow-hidden` to prevent clipping.
         */}
-        <div className="absolute left-0 w-full top-48 bottom-0 z-0 pointer-events-none">
+        {/* <div className="absolute left-0 w-full top-48 bottom-0 z-0 pointer-events-none">
             <svg 
                 className="w-full h-64" 
                 viewBox="0 0 1200 200" 
@@ -327,7 +327,7 @@ export default function DeepDivePage() {
                     strokeLinecap="round"
                 />
             </svg>
-        </div>
+        </div> */}
 
         </section>     
 
