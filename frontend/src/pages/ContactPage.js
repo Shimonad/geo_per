@@ -99,7 +99,7 @@ const ContactPage = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="Jan Miracle"
+                          placeholder="Jane Miracle"
                           className="border-[#dadce0] focus:border-[#1a73e8] focus:ring-[#1a73e8]"
                         />
                       </div>
