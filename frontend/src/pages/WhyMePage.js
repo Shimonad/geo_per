@@ -177,7 +177,7 @@ const WhyMePage = () => {
               and automation let's explore if I can be a good fit.
             </p>
             <p className="text-base text-[#1a73e8] max-w-2l mx-auto text-center leading-relaxed">
-              (Hover over cards to see what I can do for you!)
+              (Hover over cards to learn more about me!)
           </p>
           </div>
 
@@ -192,11 +192,11 @@ const WhyMePage = () => {
 
           {/* Closing Statement */}
           <div className="text-center py-8">
-            <h3 className="text-2xl lg:text-3xl font-light text-[#202124] mb-4">
-              Users dream, We build!
+            <h3 className="text-2xl lg:text-3xl font-semi-bold text-[#202124] mb-1">
+                <span class="text-[#4285F4]">F</span><span class="text-[#EA4335]">u</span><span class="text-[#FBBC05]">n </span><span class="text-[#4285F4]">F</span><span class="text-[#34A853]">a</span><span class="text-[#EA4335]">c</span><span class="text-[#FBBC05]">t</span>
             </h3>
-            <p className="text-lg text-[#5f6368] max-w-2xl mx-auto">
-              I believe in solving a problem fully and for all, Shall we?
+            <p className="text-medium text-[#5f6368] font-light italic max-w-2xl mx-auto">
+              I still use Google Maps on my iPhone, How about you?
             </p>
           </div>
         </div>
