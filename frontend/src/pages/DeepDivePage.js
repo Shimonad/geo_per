@@ -290,7 +290,7 @@ export default function DeepDivePage() {
         <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
             <div className="relative z-10 text-center max-w-4xl mx-auto space-y-6">
                 <h1 className="text-4xl lg:text-5xl font-light text-[#202124] leading-tight">
-                    Geo Map{" "}
+                     Map{" "}
                     <span className="text-green-700 font-medium">Intelligence</span>
                 </h1>
                 <p className="text-xl text-[#5f6368] leading-relaxed font-light">
@@ -304,7 +304,7 @@ export default function DeepDivePage() {
             It's now a direct child of the <section>, outside the max-w-7xl container.
             This allows it to span the full width. I also removed `overflow-hidden` to prevent clipping.
         */}
-        <div className="absolute left-0 w-full top-48 z-0 pointer-events-none">
+        <div className="absolute left-0 w-full top-48 bottom-0 z-0 pointer-events-none">
             <svg 
                 className="w-full h-64" 
                 viewBox="0 0 1200 200" 
@@ -335,9 +335,9 @@ export default function DeepDivePage() {
         
 
         {/* Challenges Section with Google Maps-style cards */}
-        <section id="challenges" className="py-24 bg-gray-43 relative">
-          <div className="container mx-auto bg-gray-43 px-6">
-            <div className="text-center mb-20 bg-gray-43">
+                 <section id="challenges" className="py-20 bg-gray-50 relative">
+           <div className="container mx-auto px-6">
+             <div className="text-center mb-20">
               <div className="inline-flex items-center gap-2 bg-red-50 rounded-full px-4 py-2 text-sm text-red-600 mb-6">
                 <Shield className="w-4 h-4" />
                 Critical Focus Areas
@@ -449,7 +449,7 @@ export default function DeepDivePage() {
         </section>
 
         {/* Solutions Section with modern card grid */}
-        <section id="solutions" className="py-15 bg-white relative">
+                 <section id="solutions" className="py-24 bg-white relative">
           <div className="absolute inset-0 bg-white opacity-30"></div>
           <div className="container mx-auto px-6 relative">
             <div className="text-center mb-20">
@@ -666,7 +666,7 @@ export default function DeepDivePage() {
 
 
         {/* Leadership Section with premium design */}
-        <section id="leadership" className="py-24 bg-white via-white to-green-50 relative overflow-hidden">
+                 <section id="leadership" className="py-24 bg-gradient-to-br from-white via-white to-green-50 relative overflow-hidden">
           <div className="absolute inset-0 opacity-40"></div>
           <div className="container mx-auto px-6 relative">
 
@@ -760,9 +760,22 @@ export default function DeepDivePage() {
                       <div key={i} className={`w-3 h-3 ${color.bg} rounded-full opacity-60`}></div>
                     ))}
                   </div>
+
+                            {/* Closing Statement */}
+
+                
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="text-center py-1">
+            <h3 className="text-2xl lg:text-3xl font-semi-bold text-[#202124] mb-1">
+                <span class="text-[#4285F4]">F</span><span class="text-[#EA4335]">u</span><span class="text-[#FBBC05]">n </span><span class="text-[#4285F4]">F</span><span class="text-[#34A853]">a</span><span class="text-[#EA4335]">c</span><span class="text-[#FBBC05]">t</span>
+            </h3>
+            <p className="text-medium text-[#5f6368] font-light italic max-w-2xl mx-auto">
+              I still use Google Maps on my iPhone, How about you?
+            </p>
           </div>
         </section>
 

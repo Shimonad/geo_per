@@ -31,7 +31,7 @@ const HomePage = () => {
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 bg-[#e3f2fd] text-[#1565c0] px-4 py-2 rounded-full text-sm font-medium">
                 <div className="w-2 h-2 bg-[#1565c0] rounded-full animate-pulse"></div>
-                <span>Available for Google Geo TPM Role</span>
+                <span>Available to add my Googlyness to your team</span>
               </div>
 
               <div className="space-y-6">
@@ -43,7 +43,7 @@ const HomePage = () => {
                 </h1>
                 
                 <p className="text-xl lg:text-2xl text-[#5f6368] leading-relaxed max-w-2xl font-light">
-                Technical Program Manager: Driving Impactful Data & AI Solutions impacting{" "}
+                Driving Impactful Data & AI Solutions impacting{" "}
                   <span className="font-medium text-[#1a73e8]">1M users globally</span>{" "}
                   with over {" "}
                   <span className="font-medium text-[#1a73e8]">$5M</span>{" "}
@@ -118,7 +118,7 @@ const HomePage = () => {
           </h2>
           <p className="text-lg text-[#5f6368] mb-8 leading-relaxed">
             Discover how my experience in technical product management, data analysis, 
-            and strategic planning aligns perfectly with Google's geo-location platform needs.
+            and strategic planning aligns perfectly with Google's strategic platform needs.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

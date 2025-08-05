@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Menu, X, ChevronDown, Mail, Linkedin } from "lucide-react";
+import { Menu, X, ChevronDown, Mail, LinkedinIcon } from "lucide-react";
 
 const Layout = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
               <Link to="/" className="flex items-center space-x-2">
                 <div class="text-2xl font-bold text-[#202124] flex items-center">
                     <span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span>
-                    <span class="ml-2 text-xl font-normal text-gray-500">Geo TPM</span>
+                    <span class="ml-2 text-xl font-normal text-gray-500">SD</span>
                 </div>
               </Link>
             </div>
@@ -184,10 +184,11 @@ const Layout = ({ children }) => {
             <div className="md:col-span-3">
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6">
-                  <svg viewBox="0 0 24 24" className="w-full h-full">
-                    <path fill="#4285f4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                      <circle fill="#ffffff" cx="12" cy="9" r="2.5"/>
-                  </svg>
+                  <img 
+                    src="/google-logo-g.png" 
+                    alt="logo icon" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="text-lg font-medium text-[#202124]">Shimona Dubey</span>
               </div>
@@ -195,24 +196,20 @@ const Layout = ({ children }) => {
               
             {/* Social Links - Part Two below Part One */}
             <div className="md:col-span-1 flex justify-end items-center">
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-6">
                 <a
                   href="mailto:shimonadubey2509@gmail.com"
-                  className="text-[#5f6368] hover:text-[#1a73e8] transition-colors duration-200"
+                  className="text-[#f8f9fa] hover:text-gray-200 transition-colors duration-200 bg-gray-800 hover:bg-gray-700 p-0.5 rounded-md flex items-center justify-center"
                   aria-label="Gmail"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M24 5.457v13.909c0 .904-.732 1.634-1.636 1.634h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" fill="#EA4335"/>
-                  </svg>
+                <Mail className="w-4 h-4" />
                 </a>
                 <a
                   href="https://linkedin.com/in/shimonadubey"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0077b5] hover:text-[#005885] transition-colors duration-200"
+                  className="text-[#f8f9fa] hover:text-gray-200 transition-colors duration-200 bg-gray-800 hover:bg-gray-700 p-0.5 rounded-md flex items-center justify-center"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <span className="text-medium font-bold w-4 h-4 flex items-center justify-center">in</span>
                 </a>
               </div>
             </div>

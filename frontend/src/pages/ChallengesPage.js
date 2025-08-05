@@ -26,7 +26,7 @@ const ChallengesPage = () => {
               <span className="text-[#ea4335] font-medium">Solved</span>
             </h1>
             <p className="text-xl text-[#5f6368] leading-relaxed font-light">
-            Critical issues that might need attention in current Geo Data Operations.
+            Case Study: Critical issues that might need attention in current Geo Data Operations.
             </p>
           </div>
         </div>
